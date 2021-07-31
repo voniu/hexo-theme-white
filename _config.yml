@@ -48,37 +48,45 @@ archive_img_mode:
 # icon
 icon:  #标签页图标
 #  header
-site_name: white.
-site_description: A minimalist theme for hexo. #The default meta description for all the meta descriptions
+site_name: 渡
+site_description: 王同学的心路历程 #The default meta description for all the meta descriptions
 #Add description property to any page to change the meta description
 menu:
-  HOME: /
-  BLOG: /archives
+  首页: /
+  文章: /archives
+  友链: /links
+  关于: /about
 
 
 ## 本地搜索
 search:
-  open: false # 是否开启
+  open: true # 是否开启
   page: /search # 页面路径（通常命名为search）
 
-
+## RSS
+feed:
+  open: true
+  page: /atom.xml
 
 # 自我介绍
 intro:
-  title: Hi.I'm White.
-  sub: 'A [White](https://github.com/FuShaoLei/hexo-theme-white) theme for [Hexo](http://hexo.io/)' # markdown语法
+  title: Kerwin / 王可 / 卧牛 / 渡吾
+  sub: '不务正业的学生 & 程序员' # markdown语法
   avator: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg #头像 暂时还没用到
   author: white #所有文章的默认作者
 
 #联系方式
 #更多图标：https://remixicon.com/
 contact:
-  Github:
-    - https://github.com/FuShaoLei/hexo-theme-white
-    - ri-github-line
   Email:
-    - mailto:1563250958@qq.com
+    - mailto:4230722[at]qq.com
     - ri-mail-line
+  Wechat:
+    - https://gitee.com/vvv4230/drawing-bed/raw/master/2021/44__47417c58033cfc569667904a05beede6_e587591787ff8bd04747b1fa990d664b.png
+    - ri-wechat-2-line
+  QQ:
+    - http://sighttp.qq.com/authd?IDKEY=efacddc06b1e8ac5750015777783ea58e0351749294f6643
+    - ri-qq-line
 
 
 ########## 关于文章的设置 ##########
@@ -87,7 +95,7 @@ contact:
 toc:
   open: true # 是否开启
   side: true  # 选择toc的位置，填true的话toc将会显示在文章的侧边，填false的话 toc将出现在文章的开头
-  max: 2 #最大深度
+  max: 3 #最大深度
   min: 2 #最小深度
 
 # 插件
@@ -132,6 +140,8 @@ pagination:
 
 # 页脚
 footer: Power by [Hexo](http://hexo.io/) Theme by [White](https://github.com/FuShaoLei/hexo-theme-white) # markdown语法
+# ICP 备案 
+ICP: '备案号：[冀ICP备19000020号-4](https://beian.miit.gov.cn/)' # markdown语法
 
 #有分类时是否开启menu分类页和自定义名字
 menu_categories:

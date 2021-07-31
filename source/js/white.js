@@ -87,6 +87,7 @@ function isIn(el) {
 } 
 //检查图片是否在可视区内，如果在，则加载
 function check() {
+  console.log(111)
   for(let p=0 ; p<imgs.length;p++){
     if(isIn(imgs[p])){
         loadImg(imgs[p]);
@@ -107,7 +108,18 @@ function loadImg(el) {
         el.src = source;
     }
 }
-
-window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
-    check();
-}
+// 节流throttle代码（定时器）：
+var throttle = function(func, delay) {            
+  var timer = null;            
+  return function() {                
+      var context = this;               
+      var args = arguments;                
+      if (!timer) {                    
+          timer = setTimeout(function() {                        
+              func.apply(context, args);                        
+              timer = null;                    
+          }, delay);                
+      }            
+  }        
+}        
+window.onload = window.onscroll = throttle(check, 500) //onscroll()在滚动条滚动的时候触发

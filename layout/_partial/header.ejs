@@ -26,6 +26,13 @@ const categoriesList = list_categories({ show_count: false });
              </div>
           </li>
         <% } %>
+        <% if(theme.feed.open===true) { %>
+          <a href="<%= url_for(theme.feed.page) %>">
+            <li class="menu-li  <%if(theme.style.animation.open==true){%>animate__animated  animate__fadeInUp<% } %>">
+              <i class="ri-rss-line"></i>
+            </li>
+          </a>
+        <% } %>
         <% if(theme.search.open===true) { %>
         <a href="<%= url_for(theme.search.page) %>">
           <li class="menu-li  <%if(theme.style.animation.open==true){%>animate__animated  animate__fadeInUp<% } %>">
