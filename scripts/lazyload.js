@@ -15,12 +15,7 @@ hexo.extend.filter.register(
           return match
         }
 
-        return `
-        <span class="lazyload-img-span">
-        <img ${attrBegin} 
-           data-src="${src}" >
-        </sapn>
-      `
+        return `<img ${attrBegin} src="${src}" loading="lazy">`
       }
     )
   },
